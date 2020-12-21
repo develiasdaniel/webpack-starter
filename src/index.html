@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>webpack starterkit</title>
 </head>
+<style>
+  td {
+    padding: 5px 10px;
+  }
+</style>
 <body>
   <h1>webpack starter</h1>
   <p>✨ A lightweight foundation for your next webpack based frontend project.</p>
+
+  <button onclick="app.checkPromise()">Promise</button>
+  <button onclick="app.showData('data-table')">ver datos</button>
+  <div style="display: flex; justify-content: space-around;margin-top: 10px;">
+    <table>
+      <tr>
+        <td style="padding: 5px 25px;">Full Name</td>
+        <td style="padding: 5px 20px;">Age</td>          
+        <td style="padding: 5px 25px;">Job</td>
+        <td style="padding: 5px 20px;">Bio</td>
+        <td style="padding: 5px 20px;">Fareweel</td>
+        <td style="padding: 5px 20px;">Select</td>
+      </tr>
+    </table>
+</div>
+  <div id="data-table" style="display: flex; justify-content: space-around;margin-top: 10px;">
+  </div>
+  <div style="display: flex; justify-content: space-around;margin-top: 10px;">
+    <input type="text" id="firstName" name="name">
+    <input type="text" id="lastName" name="name">
+    <input type="number" id="age" name="name">
+    <input type="text" id="job" name="name">
+  </div>
+  <div style="display: flex; justify-content: space-around;margin-top: 10px;">
+    <button onclick="app.updateData(true)">Actualizar</button>
+    <button onclick="app.addData()">agregar Inicio</button>
+    <button onclick="app.addData(true)">agregar Fin</button>
+    <button onclick="app.deleteData()">Borrar inicio</button>
+    <button onclick="app.deleteData(true)">Borrar Fin</button>
+  </div>
+  <div style="display: flex; justify-content: space-around;margin-top: 10px;">
+    <input type="text" id="ageFilter" name="name">
+  </div>
+  <div style="display: flex; justify-content: space-around;margin-top: 10px;">
+    <button onclick="app.filterData()">Filtrar</button>
+  </div>
+  <div id="data-table-filter" style="display: flex; justify-content: space-around;margin-top: 10px;">
+  </div>
+
 </body>
+
 </html>

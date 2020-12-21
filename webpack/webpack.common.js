@@ -5,11 +5,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: Path.resolve(__dirname, '../src/scripts/index.js')
+    app: Path.resolve(__dirname, '../src/scripts/index.js'),
+    main: Path.resolve(__dirname, '../src/scripts/main.js')
   },
   output: {
     path: Path.join(__dirname, '../build'),
-    filename: 'js/[name].js'
+    filename: 'js/[name].js',
+    library: '[name]',
+    libraryTarget: 'var'
   },
   optimization: {
     splitChunks: {
