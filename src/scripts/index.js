@@ -398,15 +398,9 @@ export function showData(table, array) {
         hilera.appendChild(celdaSelect);
         tblBody.appendChild(hilera);
         
-        let texto='dadad';
         let celdaTest= document.createElement("td");
-        console.log(celdaTest);
-        celdaTest.innerHTML += `<button onclick="${persona.bio()}">Hijjj</button>`; 
+        celdaTest.innerHTML += `<button onclick="app.funTest(${i})">Bio 2</button>`; 
         hilera.appendChild(celdaTest);
-        console.log(celdaTest.html);
-
-        // var o=document.getElementById('data-table-filter'); 
-        // o.html+=`<input type="button" value="${texto}" onclick="${persona.bio()}">`; 
         
         btnBio.onclick = function () {
             persona.bio();
@@ -428,6 +422,9 @@ export function showData(table, array) {
     tabla.setAttribute("border", "1");
 }
 
+export function funTest(i){
+    arrayPersonas[i].bio();
+}
 
 export function addData(isLast) {
     const firstName = document.getElementById("firstName").value;
